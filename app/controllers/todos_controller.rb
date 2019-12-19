@@ -3,10 +3,10 @@ class TodosController < ApplicationController
 
     # GET /todos
     def index
-        @todos = Todos.all
+        @todos = Todo.all
         json_response(@todos)
     end
-    
+
     # POST /todos
     def create
         @todo = Todo.create!(todo_params)
